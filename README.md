@@ -51,28 +51,6 @@ SYSTEMVORAUSSETZUNGEN
   Speicher:     20 GB+ für Modelle und Daten
 
 
-INSTALLATION
-================================================================================
-
-  1. Repository klonen
-
-     git clone https://github.com/wobushannes/TOM-Trainer-Pro---Universal-Speech-Analysis.git
-     cd TOM-Trainer-Pro---Universal-Speech-Analysis
-
-  2. Virtuelle Umgebung erstellen
-
-     python -m venv venv
-     source venv/bin/activate       # Linux / Mac
-     venv\Scripts\activate          # Windows
-
-  3. Abhängigkeiten installieren
-
-     pip install -r requirements.txt
-
-  4. GUI starten
-
-     python tom_trainer_pro_gui.py
-
 
 REQUIREMENTS.TXT
 ================================================================================
