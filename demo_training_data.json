@@ -1,0 +1,162 @@
+[
+  {
+    "input": "Ich versichere Ihnen, dass diese Reformen ausschließlich im Interesse der Bürger sind und keine versteckten Kosten verursachen werden.",
+    "tom": {
+      "deception_likelihood": 0.82,
+      "detected_true_emotions": ["Unsicherheit", "Angespanntheit"],
+      "hidden_intent_candidate": "Verschleierung von Budgetkürzungen"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.78,
+      "micro_expression_hypothesis": "Mikrospannen um die Augen bei Betonung von 'ausschließlich'"
+    },
+    "communication_style": {
+      "communication_style": "Formell-abwehrend",
+      "persuasion_strategy": "Autoritätsappell mit Absolutheitsanspruch"
+    }
+  },
+  {
+    "input": "Die Opposition verbreitet bewusst Falschinformationen, um die Bevölkerung zu verunsichern und ihre eigene Agenda durchzusetzen.",
+    "tom": {
+      "deception_likelihood": 0.65,
+      "detected_true_emotions": ["Verärgerung", "Verachtung"],
+      "hidden_intent_candidate": "Ablenkung von eigenen Versäumnissen"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.55,
+      "micro_expression_hypothesis": "Verengte Pupillen bei Erwähnung der Opposition"
+    },
+    "communication_style": {
+      "communication_style": "Aggressiv-konfrontativ",
+      "persuasion_strategy": "Schwarz-Weiß-Malerei und Externalisierung"
+    }
+  },
+  {
+    "input": "Ich habe vollstes Vertrauen in unser Team und bin überzeugt, dass wir jede Herausforderung gemeinsam meistern werden.",
+    "tom": {
+      "deception_likelihood": 0.35,
+      "detected_true_emotions": ["Zuversicht", "Verbundenheit"],
+      "hidden_intent_candidate": "Keine versteckte Absicht erkennbar"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.25,
+      "micro_expression_hypothesis": "Offene Gestik und aufrechte Körperhaltung"
+    },
+    "communication_style": {
+      "communication_style": "Inspirierend-motivierend",
+      "persuasion_strategy": "Wir-Gefühl und positive Verstärkung"
+    }
+  },
+  {
+    "input": "Die Entscheidung wurde in enger Abstimmung mit allen Beteiligten getroffen, auch wenn einige Details vertraulich bleiben müssen.",
+    "tom": {
+      "deception_likelihood": 0.72,
+      "detected_true_emotions": ["Vorsicht", "Zögern"],
+      "hidden_intent_candidate": "Verschleierung von internen Konflikten"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.68,
+      "micro_expression_hypothesis": "Augenkontakt wird bei 'vertraulich' kurz unterbrochen"
+    },
+    "communication_style": {
+      "communication_style": "Diplomatisch-ausweichend",
+      "persuasion_strategy": "Legitimierung durch Konsens-Behauptung"
+    }
+  },
+  {
+    "input": "Wir haben die Studie sorgfältig geprüft und kommen zu dem eindeutigen Schluss, dass unsere Produkte die sichersten auf dem Markt sind.",
+    "tom": {
+      "deception_likelihood": 0.55,
+      "detected_true_emotions": ["Selbstsicherheit", "Stolz"],
+      "hidden_intent_candidate": "Übertreibung von Studienergebnissen"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.45,
+      "micro_expression_hypothesis": "Leichtes Lächeln bei 'sichersten' - mögliche Unsicherheit"
+    },
+    "communication_style": {
+      "communication_style": "Werblich-selbstbewusst",
+      "persuasion_strategy": "Expertentum und Superlative"
+    }
+  },
+  {
+    "input": "Mein Mandant war zum Zeitpunkt des Vorfalls nachweislich nicht am Tatort und kann dies durch mehrere Zeugen belegen.",
+    "tom": {
+      "deception_likelihood": 0.88,
+      "detected_true_emotions": ["Anspannung", "Kontrolliertheit"],
+      "hidden_intent_candidate": "Konstruktion eines Alibis"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.82,
+      "micro_expression_hypothesis": "Erhöhte Blinzelfrequenz bei 'nachweislich'"
+    },
+    "communication_style": {
+      "communication_style": "Juristisch-defensiv",
+      "persuasion_strategy": "Beweislast-Verschiebung und Zeugenberufung"
+    }
+  },
+  {
+    "input": "Ich fühle mich geehrt, diese Auszeichnung entgegennehmen zu dürfen, und widme sie all denen, die mich auf diesem Weg unterstützt haben.",
+    "tom": {
+      "deception_likelihood": 0.15,
+      "detected_true_emotions": ["Dankbarkeit", "Demut", "Freude"],
+      "hidden_intent_candidate": "Aufrichtige Dankbarkeit"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.20,
+      "micro_expression_hypothesis": "Tränen in den Augen - echte Emotion"
+    },
+    "communication_style": {
+      "communication_style": "Authentisch-demütig",
+      "persuasion_strategy": "Emotionale Verbindung und Anerkennung"
+    }
+  },
+  {
+    "input": "Die wirtschaftliche Lage ist stabiler denn je, und wir erwarten im nächsten Quartal ein deutliches Wachstum von mindestens 15 Prozent.",
+    "tom": {
+      "deception_likelihood": 0.78,
+      "detected_true_emotions": ["Überschwänglichkeit", "Druck"],
+      "hidden_intent_candidate": "Beschönigung von Wirtschaftsdaten"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.72,
+      "micro_expression_hypothesis": "Schnelleres Sprechtempo bei Prognosen"
+    },
+    "communication_style": {
+      "communication_style": "Optimistisch-beschwichtigend",
+      "persuasion_strategy": "Zukunftsversprechen und Zahlen-Optimismus"
+    }
+  },
+  {
+    "input": "Ich kann mich wirklich nicht erinnern, jemals eine solche Aussage getätigt zu haben - das muss ein Missverständnis sein.",
+    "tom": {
+      "deception_likelihood": 0.91,
+      "detected_true_emotions": ["Schock", "Abwehr"],
+      "hidden_intent_candidate": "Lückenhaftes Gedächtnis vortäuschen"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.85,
+      "micro_expression_hypothesis": "Mundwinkel zucken bei 'Missverständnis'"
+    },
+    "communication_style": {
+      "communication_style": "Vermeidend-opferhaft",
+      "persuasion_strategy": "Gedächtnislücke als Entschuldigung"
+    }
+  },
+  {
+    "input": "Wir haben alle Vorschläge der Mitarbeiter sorgfältig geprüft und die besten Ideen in unser neues Konzept integriert.",
+    "tom": {
+      "deception_likelihood": 0.48,
+      "detected_true_emotions": ["Zufriedenheit", "Überlegenheit"],
+      "hidden_intent_candidate": "Selektive Wahrnehmung von Vorschlägen"
+    },
+    "emotion_dynamics": {
+      "emotional_volatility": 0.38,
+      "micro_expression_hypothesis": "Kurzer Blick nach oben bei 'besten Ideen'"
+    },
+    "communication_style": {
+      "communication_style": "Partizipativ-distanziert",
+      "persuasion_strategy": "Scheinbare Inklusion bei tatsächlicher Selektion"
+    }
+  }
+]
