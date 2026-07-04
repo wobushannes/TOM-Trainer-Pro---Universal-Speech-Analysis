@@ -1,8 +1,4 @@
 Enterprise-Grade LoRA Training & Theory of Mind Analysis Platform
-https://img.shields.io/badge/Python-3.9+-blue.svg
-https://img.shields.io/badge/PyTorch-2.0+-red.svg
-https://img.shields.io/badge/HuggingFace-Transformers-yellow.svg
-https://img.shields.io/badge/License-MIT-green.svg
 
 📋 Überblick
 TOM Trainer Pro ist eine hochmoderne Plattform für Theory of Mind (ToM) Analyse und LoRA-basiertes Fine-Tuning von Large Language Models. Das System wurde entwickelt, um verborgene emotionale Muster, Täuschungsindikatoren und kommunikative Strategien in menschlicher Sprache zu erkennen.
@@ -204,17 +200,7 @@ Whistleblower-Analyse
 
 Risikobewertung in Verhandlungen
 
-🧪 Zitierung
-Wenn du TOM Trainer Pro in deiner Forschung verwendest, bitte zitiere:
 
-bibtex
-@software{tom_trainer_pro_2026,
-  author = {[Dein Name]},
-  title = {TOM Trainer Pro: Universal Speech Analysis Platform},
-  year = {2026},
-  url = {https://github.com/yourusername/tom-trainer-pro},
-  version = {1.0.0}
-}
 ⚠️ Disclaimer
 Dieses Tool ist für Forschungszwecke konzipiert.
 Die Analyseergebnisse sind probabilistisch und nicht als alleinige Entscheidungsgrundlage geeignet.
@@ -236,12 +222,5 @@ Push zum Branch (git push origin feature/AmazingFeature)
 📜 Lizenz
 MIT License - siehe LICENSE Datei.
 
-🙏 Danksagung
-HuggingFace für Transformers & PEFT
 
-PyTorch für das ML-Framework
-
-Qwen-Team für ihre exzellenten Modelle
-
-Alle Open-Source-Contributor:innen
 
