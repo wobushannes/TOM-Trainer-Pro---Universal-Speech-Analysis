@@ -180,45 +180,13 @@ Bevor du mich kontaktierst, sende BITTE folgende Informationen:
   Vorwissen:            [Erfahrung mit NLP / ToM / LoRA]
   Erwartungen:          [Was soll das System leisten?]
 
-  E-Mail:               tom-training@proton.me
+  E-Mail:               blende_32@protonmail.com
   Betreff:              [ToM-Projekt] - [Ihre Organisation]
   Antwortzeit:          48-72 Stunden (bei vollständigen Angaben)
 
   Ich antworte NUR auf Anfragen, die ALLE oben genannten Punkte enthalten.
   Unvollständige Anfragen werden nicht bearbeitet.
 
-
-TECHNISCHE ARCHITEKTUR
-================================================================================
-
-  +-----------------------------------------------------------+
-  |                    TOM Trainer Pro                          |
-  +-----------------------------------------------------------+
-  |  +-------------+  +-------------+  +-------------------+   |
-  |  |  Training   |  |  Reports    |  |  Dokumenten-      |   |
-  |  |  Tab        |  |  Tab        |  |  Analyse Tab      |   |
-  |  +-------------+  +-------------+  +-------------------+   |
-  |  +-------------+  +-------------+  +-------------------+   |
-  |  |  Analyse    |  |  Quality    |  |  Export/Import    |   |
-  |  |  Tab        |  |  Tab        |  |  Funktionen       |   |
-  |  +-------------+  +-------------+  +-------------------+   |
-  +-----------------------------------------------------------+
-  |  Backend:       PyTorch / Transformers                     |
-  |  Fine-Tuning:   LoRA / PEFT                                |
-  |  Daten:         Datasets / Pandas                          |
-  +-----------------------------------------------------------+
-
-
-PERFORMANCE-METRIKEN (RTX 4090, BATCH SIZE 4)
-================================================================================
-
-  Metrik                Qwen2.5-1.5B  Qwen2.5-4B  Qwen2.5-7B
-  ------------------------------------------------------------
-  VRAM (Training)       ~6 GB        ~10 GB      ~14 GB
-  VRAM (Inference)      ~4 GB        ~7 GB       ~10 GB
-  Training Speed        ~100 S/s     ~60 S/s     ~35 S/s
-  Deception Accuracy    87%          92%         94%
-  Emotion Detection     83%          89%         91%
 
 
 USE CASES
