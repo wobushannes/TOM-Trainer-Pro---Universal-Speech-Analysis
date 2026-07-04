@@ -3,7 +3,6 @@ TOM TRAINER PRO - UNIVERSAL SPEECH ANALYSIS
 
 Enterprise-Grade LoRA Training & Theory of Mind Analysis Platform
 
-GitHub:   https://github.com/wobushannes/TOM-Trainer-Pro---Universal-Speech-Analysis
 Autor:    Johannes Wobus
 Lizenz:   MIT
 Stand:    Juli 2026
