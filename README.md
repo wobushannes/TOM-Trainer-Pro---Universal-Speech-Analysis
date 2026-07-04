@@ -222,6 +222,3 @@ KONTAKT
 
   E-Mail:   blende_32@protonmail.com (nur für vollständige Anfragen)
 
-================================================================================
-Made with ❤️ für die wissenschaftliche Gemeinschaft
-================================================================================
