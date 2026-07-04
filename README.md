@@ -220,7 +220,6 @@ LIZENZ
 KONTAKT
 ================================================================================
 
-  GitHub:   https://github.com/wobushannes/TOM-Trainer-Pro---Universal-Speech-Analysis
   E-Mail:   blende_32@protonmail.com (nur für vollständige Anfragen)
 
 ================================================================================
