@@ -217,12 +217,6 @@ BEITRÄGE (CONTRIBUTIONS)
   5. Pull Request öffnen
 
 
-LIZENZ
-================================================================================
-
-  MIT License – siehe LICENSE-Datei im Repository.
-
-
 KONTAKT
 ================================================================================
 
