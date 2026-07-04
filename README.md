@@ -1,6 +1,5 @@
-================================================================================
+
 TOM TRAINER PRO - UNIVERSAL SPEECH ANALYSIS
-================================================================================
 
 Enterprise-Grade LoRA Training & Theory of Mind Analysis Platform
 
