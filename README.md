@@ -45,27 +45,7 @@ TOM Trainer Pro uses **LoRA fine-tuning** to adapt LLMs for psycholinguistic pat
 
 ## Training Data Format
 
-The system expects JSON or JSONL files with the following structure:
-
-```json
-{
-  "input": "The text to analyze",
-  "tom": {
-    "deception_likelihood": 0.75,
-    "detected_true_emotions": ["Sadness", "Anger"],
-    "hidden_intent_candidate": "Concealment of guilt"
-  },
-  "emotion_dynamics": {
-    "emotional_volatility": 0.82,
-    "micro_expression_hypothesis": "Suppressed anger"
-  },
-  "communication_style": {
-    "communication_style": "Avoidant",
-    "persuasion_strategy": "Emotional manipulation"
-  }
-}
-
-### Field Descriptions
+## Field Descriptions
 
 | Field | Type | Range | Description |
 |-------|------|-------|-------------|
