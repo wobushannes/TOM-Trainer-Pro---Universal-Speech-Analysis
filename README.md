@@ -10,6 +10,14 @@ TOM Trainer Pro is a research platform for **Theory of Mind (ToM) analysis** and
 
 ---
 
+## Demos
+
+- [Demo 1](https://www.youtube.com/watch?v=CNT9nQdYa4E)
+- [Demo 2](https://www.youtube.com/watch?v=JR9oRLHoD3w)
+- [Demo 3](https://www.youtube.com/watch?v=lSDSjdFZsVo)
+
+---
+
 ## Overview
 
 TOM Trainer Pro uses **LoRA fine-tuning** to adapt LLMs for psycholinguistic pattern detection: deception likelihood, hidden emotional states, communicative strategies (avoidance, manipulation, persuasion), and micro-expression hypotheses in text. It is a fine-tuning and analysis platform that learns from annotated data.
