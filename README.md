@@ -1,224 +1,215 @@
+# TOM Trainer Pro — Universal Speech Analysis
 
-TOM TRAINER PRO - UNIVERSAL SPEECH ANALYSIS
+**Enterprise-Grade LoRA Training & Theory of Mind Analysis Platform**
 
-Enterprise-Grade LoRA Training & Theory of Mind Analysis Platform
+---
 
-Autor:    Johannes Wobus
-Lizenz:   MIT
-Stand:    Juli 2026
+## TL;DR
 
-https://www.youtube.com/watch?v=CNT9nQdYa4E
+TOM Trainer Pro is a research platform for **Theory of Mind (ToM) analysis** and **LoRA-based fine-tuning** of Large Language Models. It detects deception, hidden emotions, and communicative strategies in text — from single sentences to full documents. Built for research and security applications.
 
-https://www.youtube.com/watch?v=JR9oRLHoD3w
+---
 
-https://www.youtube.com/watch?v=lSDSjdFZsVo
+## Overview
 
+TOM Trainer Pro uses **LoRA fine-tuning** to adapt LLMs for psycholinguistic pattern detection: deception likelihood, hidden emotional states, communicative strategies (avoidance, manipulation, persuasion), and micro-expression hypotheses in text. It is a fine-tuning and analysis platform that learns from annotated data.
 
-ÜBERBLICK
-================================================================================
+---
 
-TOM Trainer Pro ist eine Plattform für Theory of Mind (ToM) Analyse und
-LoRA-basiertes Fine-Tuning von Large Language Models (LLMs). Das System
-erkennt verborgene emotionale Muster, Täuschungsindikatoren und kommunikative
-Strategien in menschlicher Sprache.
+## Key Features
 
-KERN-FUNKTIONEN
-================================================================================
+- **LoRA Training** – Fine-tune LLMs with real-time monitoring (loss, GPU usage, convergence)
+- **Automated Reports** – Generate HTML training reports with quality metrics
+- **Document Analysis** – PDF and text document analysis with chunk-based ToM processing
+- **Real-Time Analysis** – Sentence-level analysis with detailed interpretation
+- **Data Quality Metrics** – Monitor emotion diversity, domain balance, and annotation consistency
 
-  Training         LoRA-Fine-Tuning mit Echtzeit-Monitoring
-                   (Loss, GPU-Auslastung, Konvergenz)
+---
 
-  Reports          Automatisierte HTML-Trainingsberichte mit
-                   Qualitätsmetriken
+## Supported Models
 
-  Dokumenten-      Chunk-basierte ToM-Analyse von PDFs und
-  Analyse          Textdokumenten
+- Qwen2.5 Family: 1.5B, 4B, 7B Instruct
+- Mistral AI: Mistral-7B-Instruct-v0.3
+- Microsoft: DialoGPT-medium (legacy)
 
-  Echtzeit-        Satzweise Analyse mit detaillierter
-  Analyse          Interpretation
+---
 
-  Data Quality     Metriken zu Datenqualität, Emotions-Diversität
-                   und Domain-Balance
+## System Requirements
 
-UNTERSTÜTZTE MODELLE
-================================================================================
+- Python 3.9+ (3.10+ recommended)
+- RAM: 16 GB (32 GB recommended)
+- GPU: NVIDIA 8 GB+ VRAM (12 GB+ recommended)
+- Storage: 20 GB+ (50 GB+ recommended)
 
-  - Qwen2.5-Familie: 1.5B, 4B, 7B Instruct
-  - Mistral AI: Mistral-7B-Instruct-v0.3
-  - Microsoft: DialoGPT-medium (Legacy)
+---
 
+## Training Data Format
 
-SYSTEMVORAUSSETZUNGEN
-================================================================================
+The system expects JSON or JSONL files with the following structure:
 
-  Python:       3.9 oder höher
-  RAM:          16 GB (32 GB empfohlen)
-  GPU:          NVIDIA mit 8 GB+ VRAM (zwingend für Training)
-  Speicher:     20 GB+ für Modelle und Daten
-
-
-
-REQUIREMENTS.TXT
-================================================================================
-
-  torch>=2.0.0
-  transformers>=4.36.0
-  peft>=0.7.0
-  datasets>=2.14.0
-  accelerate>=0.25.0
-  bitsandbytes>=0.41.0
-  scikit-learn>=1.3.0
-  matplotlib>=3.7.0
-  pandas>=2.0.0
-  numpy>=1.24.0
-  textstat>=0.7.0
-  pymupdf>=1.23.0
-  tkinter  # Standard in Python enthalten
-
-
-TRAININGSDATEN-FORMAT
-================================================================================
-
-Das System erwartet JSON- oder JSONL-Dateien im folgenden Format:
-
+```json
 {
-  "input": "Der zu analysierende Text",
+  "input": "The text to analyze",
   "tom": {
     "deception_likelihood": 0.75,
-    "detected_true_emotions": ["Trauer", "Wut"],
-    "hidden_intent_candidate": "Verschleierung von Schuld"
+    "detected_true_emotions": ["Sadness", "Anger"],
+    "hidden_intent_candidate": "Concealment of guilt"
   },
   "emotion_dynamics": {
     "emotional_volatility": 0.82,
-    "micro_expression_hypothesis": "Unterdrückter Ärger"
+    "micro_expression_hypothesis": "Suppressed anger"
   },
   "communication_style": {
-    "communication_style": "Vermeidend",
-    "persuasion_strategy": "Emotionale Manipulation"
+    "communication_style": "Avoidant",
+    "persuasion_strategy": "Emotional manipulation"
   }
 }
 
-FELDBESCHREIBUNG
+### Field Descriptions
 
-  Feld                                   Typ        Bereich    Beschreibung
-  --------------------------------------------------------------------------
-  input                                  String     -          Der zu analysierende Text
-  tom.deception_likelihood               Float      0.0-1.0    Täuschungswahrscheinlichkeit
-  tom.detected_true_emotions             Array      -          Erkannte Emotionen
-  tom.hidden_intent_candidate            String     -          Vermutete Absicht
-  emotion_dynamics.emotional_volatility  Float      0.0-1.0    Emotionale Volatilität
-  emotion_dynamics.micro_expression_     String     -          Hypothese zu Mikroausdrücken
-    hypothesis
-  communication_style.communication_style String    -          Kommunikationsstil
-  communication_style.persuasion_strategy String     -          Überzeugungsstrategie
+| Field | Type | Range | Description |
+|-------|------|-------|-------------|
+| `input` | String | - | The text to analyze |
+| `tom.deception_likelihood` | Float | 0.0–1.0 | Probability of deception |
+| `tom.detected_true_emotions` | Array | - | Detected emotions |
+| `tom.hidden_intent_candidate` | String | - | Suspected intent |
+| `emotion_dynamics.emotional_volatility` | Float | 0.0–1.0 | Emotional volatility score |
+| `emotion_dynamics.micro_expression_hypothesis` | String | - | Hypothesis about micro-expressions |
+| `communication_style.communication_style` | String | - | Communication style |
+| `communication_style.persuasion_strategy` | String | - | Persuasion strategy |
 
+---
 
-SCHNELLSTART MIT DEMO-DATENSATZ
-================================================================================
+## Quick Start
 
-Ein Demo-Datensatz mit 10 Einträgen ist in "demo_training_data.json" enthalten.
+A demo dataset with 10 entries is included (`demo_training_data.json`).
 
-  1. GUI starten:                python tom_trainer_pro_gui.py
-  2. Modell auswählen:           z.B. Qwen/Qwen2.5-1.5B-Instruct
-  3. "Durchsuchen"               → demo_training_data.json auswählen
-  4. "Rohdaten zu Training konvertieren" klicken
-  5. "Training starten"          (3-5 Episoden empfohlen)
-  6. Nach Training:              "Trainiertes LoRA laden" für Analysen
+1. Start the GUI: `python tom_trainer_pro_gui.py`
+2. Select a model (e.g., `Qwen/Qwen2.5-1.5B-Instruct`)
+3. Load the demo dataset (or your own)
+4. Convert raw data to training format
+5. Start training (3–5 epochs recommended)
+6. Load the trained LoRA for analysis
 
+---
 
-WICHTIGER HINWEIS ZU TRAININGSDATEN
-================================================================================
+## Important Note on Training Data
 
-  Ich biete KEINEN Support für die Generierung von Trainingsdaten oder die
-  Annotation von ToM-Merkmalen.
+I do **not** provide support for generating training data or annotating ToM features. High-quality training data requires deep psycholinguistic expertise, understanding of Theory of Mind concepts, experience with emotion annotation, and knowledge of communication strategies.
 
-  Die Erstellung hochwertiger Trainingsdaten erfordert:
-    - Tiefgehende psycholinguistische Expertise
-    - Verständnis von Theory of Mind Konzepten
-    - Erfahrung mit Emotionsannotation
-    - Kenntnis von Kommunikationsstrategien
+---
 
+## Use Cases
 
-KONTAKT FÜR PROFESSIONELLE ZUSAMMENARBEIT
-================================================================================
+1. **Political Speech Analysis** – Detect deception, emotional manipulation, and hidden intent in public discourse.
+2. **Forensic Linguistics** – Analyze witness statements, interrogation protocols, and credibility assessments.
+3. **Psychological Research** – Study emotion dynamics in therapy sessions, couple communication, and child development.
+4. **Security Analysis** – Early detection of manipulation attempts, whistleblower analysis, risk assessment in negotiations.
 
-Ich habe mehrere LoRAs mit diesen Formaten trainiert und biete gegen Honorar:
+---
 
-  - Datenannotation:            Professionelle ToM-Annotation
-  - LoRA-Training:              Custom LoRAs für spezifische Fälle
-  - Qualitätssicherung:         Data Quality Audits & Optimierung
-  - Deployment:                 Integration in bestehende Systeme
+## Professional Collaboration
 
+I have trained multiple LoRAs with this format and offer the following services for a fee:
 
-KONTAKTAUFNAHME (BEWERBUNGSVERFAHREN)
-================================================================================
+| Service | Description |
+|---------|-------------|
+| **Data Annotation** | Professional ToM annotation for your domain |
+| **LoRA Training** | Custom LoRAs for specific use cases |
+| **Quality Assurance** | Data quality audits and optimization |
+| **Deployment** | Integration into existing systems |
 
-Bevor du mich kontaktierst, sende BITTE folgende Informationen:
+---
 
-  Projekt-Art:          [Forschung / Unternehmen / Startup / Anderes]
-  Anwendungsbereich:    [z.B. Politische Analyse / Marktforschung]
-  Datenvolumen:         [Anzahl der Sätze / Dokumente]
-  Zeitrahmen:           [Deadline / Projektlaufzeit]
-  Budget:               [Rahmen / Indikation]
-  Vorwissen:            [Erfahrung mit NLP / ToM / LoRA]
-  Erwartungen:          [Was soll das System leisten?]
+## Contact (Application Process)
 
-  E-Mail:               blende_32@protonmail.com
-  Betreff:              [ToM-Projekt] - [Ihre Organisation]
-  Antwortzeit:          48-72 Stunden (bei vollständigen Angaben)
+Before contacting me, please send the following information:
 
-  Ich antworte NUR auf Anfragen, die ALLE oben genannten Punkte enthalten.
-  Unvollständige Anfragen werden nicht bearbeitet.
+- **Project Type:** [Research / Company / Startup / Other]
+- **Application Area:** [e.g., Political Analysis / Market Research]
+- **Data Volume:** [Number of sentences / documents]
+- **Timeline:** [Deadline / project duration]
+- **Budget:** [Range / indication]
+- **Prior Knowledge:** [Experience with NLP / ToM / LoRA]
+- **Expectations:** [What should the system deliver?]
 
+**Email:** `blende_32@protonmail.com`
+**Subject:** `[ToM Project] - [Your Organization]`
+**Response Time:** 48–72 hours (with complete information)
 
+I only respond to inquiries that contain **all** of the above points. Incomplete requests will not be processed.
 
-USE CASES
-================================================================================
+---
 
-  1. Politische Redeanalyse
-     Beispiel:
-     text = "Die Opposition verbreitet bewusst Falschinformationen..."
-     result = analyze_text(text)
-     # → Täuschung: 65%, Emotionen: ['Verärgerung', 'Verachtung']
+## Ethical Considerations
 
-  2. Forensische Linguistik
-     - Täuschung in Zeugenaussagen
-     - Analyse von Verhörprotokollen
-     - Bewertung von Glaubwürdigkeit
+TOM Trainer Pro is a **high-risk AI research tool**. Textual analysis — especially deception detection and intent analysis — carries significant risks of misuse in surveillance, social control, and discrimination.
 
-  3. Psychologische Forschung
-     - Emotionsdynamik in Therapiegesprächen
-     - Kommunikationsstile in der Paartherapie
-     - ToM-Entwicklung bei Kindern
+**This project is guided by the same ethical principles as MouthMind:**
 
-  4. Sicherheitsanalyse
-     - Früherkennung von Manipulationsversuchen
-     - Whistleblower-Analyse
-     - Risikobewertung in Verhandlungen
+1. **Transparency Without Vulnerability** – The architecture and approach are documented. Code, weights, and training data are not public.
+2. **Privacy by Design** – The system processes text, not personal identifiers. No data is stored or shared without explicit consent.
+3. **Controlled Access** – Access is restricted to institutions with proven research experience and a clear ethical framework. Commercial use is strictly prohibited.
+4. **Active Misuse Prevention** – Use is monitored. In case of misuse, access is revoked.
+5. **Commitment to Public Benefit** – Findings and insights are shared. The tool itself remains controlled.
 
+---
 
-DISCLAIMER
-================================================================================
+## Disclaimer
 
-  Dieses Tool ist für Forschungszwecke konzipiert. Die Analyseergebnisse sind
-  probabilistisch und nicht als alleinige Entscheidungsgrundlage geeignet.
-  Fehlinterpretationen sind möglich. Verwendung auf eigene Verantwortung.
+This tool is designed for **research purposes only**. Analysis results are **probabilistic** and **not suitable as sole decision-making criteria**. Misinterpretation is possible. Use is at your own risk.
 
+---
 
-BEITRÄGE (CONTRIBUTIONS)
-================================================================================
+## License
 
-  Contributions sind willkommen!
+This project is **not open source**. All rights reserved. © 2026 Johannes Wobus — TOM Trainer Pro Research
 
-  1. Fork das Repository
-  2. Feature Branch erstellen: git checkout -b feature/AmazingFeature
-  3. Commit:                    git commit -m 'Add some AmazingFeature'
-  4. Push:                      git push origin feature/AmazingFeature
-  5. Pull Request öffnen
+---
 
+## FAQ
 
-KONTAKT
-================================================================================
+**Can I get the code or model?** No. Code, weights, and training data are not public — and never will be.
 
-  E-Mail:   blende_32@protonmail.com (nur für vollständige Anfragen)
+**I'm a researcher / student. Can I get access?** No. Access is restricted to institutions with proven research experience and a clear ethical framework.
 
+**Can I use it commercially?** No. Commercial use is strictly prohibited. No licenses. No exceptions.
+
+**Why so restrictive?** Because deception detection and intent analysis have misuse potential. We take this seriously.
+
+**Can I collaborate?** Yes — if you're from a university, institute, or comparable research environment. Contact us with your profile, institution, and concrete proposal. All other inquiries will be ignored.
+
+**Can I discuss the research with you?** Yes — in academic or policy contexts. Contact us with a clear proposal.
+
+**Can I hire you as a consultant?** We offer consulting and research collaboration for institutions with a clear ethical framework. Contact us for details.
+
+---
+
+## Contributions
+
+Contributions are welcome — but only under the same ethical framework.
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit: `git commit -m 'Add some AmazingFeature'`
+4. Push: `git push origin feature/AmazingFeature`
+5. Open a Pull Request
+
+---
+
+## Contact
+
+Serious inquiries only.
+
+**ProtonMail:** `blende_32@protonmail.com`
+**Threema:** `BA46EWMP`
+
+**Before contacting us:**
+
+- Provide full name and institution
+- State your concrete purpose
+- Don't ask for code or access — it will be ignored
+
+---
+
+*"We show what's possible — not how it's done."*
